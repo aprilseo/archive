@@ -9,9 +9,9 @@ body {
     color:#FFDC82;
     font-family: "Press Start 2P", system-ui;
     cursor: url('assets/banana.png'),auto;
-    background-image: url('assets/background.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
-    background-size: cover; /* Ensures the background image covers the entire background */
-    background-position: center; /* Centers the background image */
+    background-image: url('assets/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
 }
 
@@ -106,6 +106,7 @@ body {
 #NY-container .NY-item img,
 #PA-container .PA-item img {
     width: 50%; 
+    overflow-y: auto;
     transition: 0.6s ease; 
 
 }
