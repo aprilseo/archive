@@ -35,6 +35,10 @@
     {
         "name": "03/15/2024 NY",
         "asset":"a9.jpg"
+    },
+    {
+        "name": "03/19/2024 NY",
+        "asset":"h10.jpg"
     }
 ],
     "PA", [
@@ -73,6 +77,15 @@
     {
         "name": "03/16/2024 PA",
         "asset":"h9.jpg"
+    },
+    {
+        "name": "03/20/2024 PA",
+        "asset":"h10.jpg"
     }
-]
+    ],
+    "Custom", [
+    {
+        "asset":"cursor.png"
+    }
+    ]
 ]

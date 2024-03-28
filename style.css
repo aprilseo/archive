@@ -8,30 +8,31 @@ body {
     font-size: 1.6rem;
     background-color:#FFDC82;
     font-family: "Press Start 2P", system-ui;
-    overflow-y: hidden;
-    cursor: url('cursor.png'), auto;
+    cursor: url('assets/banana.png'),auto;
 }
+
 
 .title-container{
-    font-family: "Press Start 2P", system-ui;
     height:100vh;
-    width:15%;
-    text-align: center;
-    font-size:large;
-    padding-top:33rem;
-    padding-right: 2rem;
-    color:#AD845D;
-    border-right: 1px solid #AD845D; 
+    width:0.1%;
+    z-index: 2;
+    padding-top:30rem;
 }
 
-.title-container a,
-.title-container a:visited{
-    color:inherit;
-    text-decoration:none;
+.main {
+    height: 20%;
+    display: flex;
+    position:fixed;
+    justify-content: center;
+    align-items: center;
+    padding-left:77rem;
+    transform: scale(0.5); 
+    transition: transform 0.2s ease;
 }
 
-.title-container a:hover{
-    text-decoration: underline;
+
+.main:hover {
+    transform: scale(0.515); 
 }
 
 .flex-container {
@@ -45,7 +46,6 @@ body {
     grid-template-rows: repeat(2, 1fr); 
     gap: 0; 
     font-size: small;
-    overflow-y: hidden;
 }
 
 .row {
@@ -60,6 +60,7 @@ body {
     align-items: center; 
     justify-content: space-between; 
     border-right: 1px solid #AD845D; 
+    width:50%;
 }
 
 #PA-container .grid-item.active{
@@ -69,6 +70,7 @@ body {
 .row .grid-item.active {
     background-color: #fff;
     height: 10%;
+    width:100%;
 }
 
 .row .grid-item p {
@@ -83,10 +85,14 @@ body {
     width: auto; 
 }
 
+#NY-container{
+    border-right: 1px solid #AD845D; 
+}
+
 #NY-container,
 #PA-container {
     color: #AD845D;
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
 }
 
 #NY-container .NY-item img,
@@ -97,5 +103,39 @@ body {
 }
 
 
+@media only screen and (max-width: 767px) {
+    .flex-container{
+        padding:0;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main {
+        padding-left:8rem;
+        transform: scale(0.5); 
+    }
+
+    .grid-container {
+        display: flex; 
+        flex-direction: row; 
+        overflow-y: auto; 
+    }
+    .row {
+        flex-direction: column;
+    }
+
+    .row .grid-item { 
+        border-bottom: 1px solid #AD845D; 
+        border-right: none;
+        width: 100%; 
+    }
+
+    .row .grid-item p {
+        transform: rotate(0deg);
+    }
 
 
+
+
+}
