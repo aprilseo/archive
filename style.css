@@ -6,9 +6,13 @@ html {
 
 body {
     font-size: 1.6rem;
-    background-color:#FFDC82;
+    color:#FFDC82;
     font-family: "Press Start 2P", system-ui;
     cursor: url('assets/banana.png'),auto;
+    background-image: url('assets/background.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover; /* Ensures the background image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat;
 }
 
 
@@ -55,12 +59,16 @@ body {
 
 .row .grid-item {
     padding: 10px;
-    border-bottom: 1px solid #AD845D; 
+    border-bottom: 1px solid #FFDC82; 
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    border-right: 1px solid #AD845D; 
+    border-right: 1px solid #FFDC82; 
     width:50%;
+}
+
+.grid-item.active{
+    transform:scale(1);
 }
 
 #PA-container .grid-item.active{
@@ -86,12 +94,12 @@ body {
 }
 
 #NY-container{
-    border-right: 1px solid #AD845D; 
+    border-right: 1px solid #FFDC82; 
 }
 
 #NY-container,
 #PA-container {
-    color: #AD845D;
+    color: #FFDC82;
     overflow-y: auto;
 }
 
@@ -112,7 +120,7 @@ body {
     }
 
     .main {
-        padding-left:8rem;
+        padding-left:5.5rem;
         transform: scale(0.5); 
     }
 
@@ -126,7 +134,7 @@ body {
     }
 
     .row .grid-item { 
-        border-bottom: 1px solid #AD845D; 
+        border-bottom: 1px solid #FFDC82; 
         border-right: none;
         width: 100%; 
     }
@@ -134,6 +142,18 @@ body {
     .row .grid-item p {
         transform: rotate(0deg);
     }
+
+    #NY-container,
+    #PA-container {
+    color: #FFDC82;
+    overflow-x: hidden;
+    overflow-y: auto;
+    }
+    #NY-container.active,
+    #PA-container.active{
+        color: #AD845D;
+        overflow-y: auto;
+    }   
 
 
 

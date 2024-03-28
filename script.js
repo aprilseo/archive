@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
             this.classList.toggle('active');
             imageElement.style.display = imageElement.style.display === 'none' ? 'block' : 'none';
             
-            // Toggle the inactive class based on the active state
             if (this.classList.contains('active')) {
                 this.classList.remove('inactive');
             } else {
